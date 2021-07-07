@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    font-weight: normal;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    letter-spacing: 4px;
+    text-align: center;
+    padding-top: 80px;
+}
+h2 {
+    color: #333333;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 16px;
+    font-style: italic;
+}
+
+p {
+    font-size: 16px;
+}
+
+#header {
+    width: 100%;
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#header .open-menu .menu-icon {
+    display: none;
+}
+
+#nav {
+    display: flex;
+}
+
+#nav li {
+    position: relative;
+    display: block;
+    height: 46px;
+}
+
+#nav a {
+    display: block;
+    width: 100%;
+    padding: 0 24px;
+    line-height: 46px;
+    color: white;
+}
+
+#nav li:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+#nav li:hover a{
+    color: black;
+}
+
+.subnav {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#nav .subnav a {
+    color: black;
+    padding-left: 12px !important;
+    padding-right: 48px !important;
+}
+
+#nav li:hover ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#nav .subnav {
+    /*display: none;*/
+}
+
+#header .search {
+    top: 0px;
+    right: 0px;
+    height: 46px;
+    width: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header .search:hover {
+    background-color: red;
+}
+
+#header .search-icon {
+    color: white;
+}
+
+#banner {
+    background: url("banner/ny.jpg") bottom center / cover no-repeat;
+    padding-bottom: 50%;
+    padding-top: 46px;
+    position: relative;
+}
+
+#banner .banner-text{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    color: white;
+}
+
+#about {
+    min-height: 720px;
+}
+
+.base-horizon {
+    width: 800px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.member {
+    width: 100%;
+    padding: 72px 36px;
+}
+
+.member-name {
+    text-align: center;
+    padding-bottom: 24px;
+}
+
+#tour {
+    background-color: black;
+    min-height: 800px;
+}
+
+#tour .month-ticket>div {
+    line-height: 40px;
+    background-color: white;
+    border-bottom: 1px solid #333;
+    padding-left: 24px;
+}
+
+#tour .month-ticket div .sold-out {
+    line-height: 26px;
+    display: inline-block;
+    background-color: #f44336;
+    padding: 0 4px;
+}
+
+#tour .flex-row-2side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#tour .month-ticket div .remain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    height: 32px;
+    width: 32px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.destinations {
+    margin-top: 32px;
+}
+
+.flex-row {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.flex-item {
+    flex: 1;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.destinations .place-text {
+    background-color: white;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 24px;
+    padding-top: 0;
+}
+
+.destinations .place-text div {
+    margin: 15px 0;
+}
+
+.destinations .place-text .place {
+    font-weight: 500;
+    margin-top: -4px;
+    padding-top: 15px;
+}
+
+.destinations .place-text .date {
+    color: #888;
+}
+
+#contact button,
+.destinations .place-text button {
+    border: 0;
+    height: 36px;
+    background-color: black;
+    color: white;
+    padding: 0 8px;
+    font-size: 16px;
+}
+
+#contact button:hover,
+.destinations .place-text button:hover {
+    background-color: #ccc;
+    color: black;
+    cursor: pointer;
+}
+
+.destinations img {
+    width: 100%;
+}
+
+.destinations img:hover {
+    opacity: 0.6;
+}
+
+#contact {
+    min-height: 460px;
+}
+
+#contact p {
+    font-size: 18px;
+}
+
+.two-col {
+    width: 50%;
+    float: left;
+}
+#contact input {
+    display: block;
+    width: 100%;
+    height: 36px;
+    padding: 8px;
+    font-size: 16px;
+    color: #aaa;
+}
+
+#contact input:valid {
+    color: black !important;
+}
+
+#contact button {
+    border: 0;
+}
+
+#map {
+    margin-top: 0;
+    padding-top: 50%;
+    filter: grayscale(50%);
+    background: url("map/map.jpg") top center / cover no-repeat;
+}
+
+#media{
+    height: 220px;
+}
+#media .icon{
+    width: 100%;
+    text-align: center;
+    margin-top: 80px;
+    font-size: 24px;
+}
+#media .author {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    color: #333;
+}
+#media .author a {
+    color: #333;
+    text-decoration: underline;
+}
+
+@media (max-width: 1023px) and (min-width: 740px) {
+    .base-horizon {
+        width: 100%;
+    }
+}
+
+@media(max-width: 739px) {
+    .base-horizon {
+        width: 100%;
+    }
+
+    #header .search {
+        position: absolute;
+    }
+
+    #header .open-menu {
+        width: 100%;
+    }
+
+    #header .open-menu .menu-icon {
+        display: flex;
+        color: white;
+        height: 46px;
+        width: 46px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #nav {
+        display: none;
+        flex-direction: column;
+        height: 800px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+
+    #nav .subnav {
+        display: block;
+    }
+
+    #header .open-menu .menu-icon:hover {
+        background-color: #ccc;
+        color: #000;
+    }
+
+    #header .open-menu:hover #nav{
+    }
+
+    #nav .open-menu {
+        display: flex;
+        line-height: 46px;
+        width: 46px;
+        text-align: center;
+        color: white;
+    }
+
+    #nav li{
+        background-color: black;
+    }
+
+    #nav .subnav {
+        width: 100%;
+    }
+
+    #nav .subnav li a {
+        color: white;
+        padding-left: 36px !important;
+    }
+
+    .flex-row.phone-new-flex {
+        flex-direction: column;
+        padding-bottom: 48px;
+        margin-top: 48px!important;
+    }
+
+    .flex-item .member {
+        padding: 24px 24px;
+    }
+
+}
