@@ -89,10 +89,6 @@ p {
     flex-direction: column;
 }
 
-#nav .subnav {
-    /*display: none;*/
-}
-
 #header .search {
     top: 0px;
     right: 0px;
@@ -111,10 +107,15 @@ p {
 }
 
 #banner {
-    background: url("banner/ny.jpg") bottom center / cover no-repeat;
     padding-bottom: 50%;
     padding-top: 46px;
     position: relative;
+}
+
+#banner img {
+    position: absolute;
+    width: 100%;
+    top: 46px; left: 0;
 }
 
 #banner .banner-text{
@@ -225,13 +226,87 @@ p {
     color: #888;
 }
 
+#purchase {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+#toggle-purchase {
+    display: none;
+}
+
+#toggle-purchase:checked ~ #purchase {
+    display: flex;
+}
+
+#purchase .window {
+    width: 900px;
+    max-width: 90%;
+    background-color: white;
+    position: relative;
+}
+#purchase .window .close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: #eeeeee;
+}
+
+#purchase .window .close:hover {
+    color: #ff253a;
+}
+
+#purchase .window .title {
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    background-color: #009688;
+    font-size: 30px;
+    letter-spacing: 4px;
+    color: white;
+}
+
+#purchase .purchase-form {
+    padding: 32px;
+}
+
+#purchase .purchase-form p {
+    margin: 16px 0;
+}
+
+#purchase .purchase-form input {
+    height: 40px;
+    width: 100%;
+    padding: 8px;
+}
+
+#purchase .purchase-form button {
+    margin-top: 24px;
+    height: 46px;
+    width: 100%;
+    background-color: #009688;
+    color: white;
+    border: 0;
+}
+
+#purchase .purchase-form button:hover {
+    background-color: #ccc;
+    color: black;
+}
+
 #contact button,
 .destinations .place-text button {
     border: 0;
-    height: 36px;
     background-color: black;
     color: white;
-    padding: 0 8px;
+    padding: 8px 16px;
     font-size: 16px;
 }
 

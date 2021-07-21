@@ -6,7 +6,6 @@
     <title>The Band</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.css">
-
 </head>
 <body>
 <main>
@@ -31,11 +30,13 @@
     </div>
 
     <div id="banner">
+        <img src="banner/ny.jpg" alt="New york">
         <div class="banner-text">
             <p style="margin: 10px; font-size: 24px">New York</p>
             <p style="margin-bottom: 47px; margin-top: 16px; font-size: 15px">The atmosphere in New York is lorem ipsum.</p>
         </div>
     </div>
+    <script src="main.js"></script>
 
     <div id="about">
         <div class="base-horizon">
@@ -85,7 +86,7 @@
                             <div class="place">New York</div>
                             <div class="date">Fri 27 Nov 2016</div>
                             <div class="text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                            <button> Buy tickets</button>
+                            <button><label for="toggle-purchase">Buy tickets</label></button>
                         </div>
                     </div>
                     <div class="flex-item">
@@ -94,7 +95,7 @@
                             <div class="place">Paris</div>
                             <div class="date">Sat 28 Nov 2016</div>
                             <div class="text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                            <button> Buy tickets</button>
+                            <button><label for="toggle-purchase">Buy tickets</label></button>
                         </div>
                     </div>
                     <div class="flex-item">
@@ -103,7 +104,21 @@
                             <div class="place">San Francisco</div>
                             <div class="date">Sun 29 Nov 2016</div>
                             <div class="text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                            <button> Buy tickets</button>
+                            <button><label for="toggle-purchase">Buy tickets</label></button>
+                        </div>
+                    </div>
+                    <input type="checkbox" id="toggle-purchase">
+                    <div id="purchase">
+                        <div class="window">
+                            <div class="close"><label for="toggle-purchase"><i class="fas fa-2x fa-window-close"></i></label></div>
+                            <div class="title"><i class="fas fa-suitcase"></i> Tickets</div>
+                            <form class="purchase-form">
+                                <p><i class="fas fa-shopping-cart"></i> Tickets, $15 per person</p>
+                                <input type="text" placeholder="How many?" required>
+                                <p><i class="fas fa-user-alt"></i> Send To</p>
+                                <input type="text" placeholder="Enter email" required>
+                                <button type="submit">PAY <i class="fas fa-check"></i></button>
+                            </form>
                         </div>
                     </div>
                 </div>
