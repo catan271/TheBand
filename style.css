@@ -116,15 +116,6 @@ p {
     display: none;
 }
 
-@keyframes appear {
-    from {
-        opacity: 0.5;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 #banner img {
     position: absolute;
     width: 100%;
@@ -137,6 +128,7 @@ p {
     bottom: 0px;
     text-align: center;
     color: white;
+    text-shadow: 0 0 10px #000;
 }
 
 #about {
