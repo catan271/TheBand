@@ -166,6 +166,7 @@ p {
 #tour .month-ticket div .sold-out {
     line-height: 26px;
     display: inline-block;
+    color: white;
     background-color: #f44336;
     padding: 0 4px;
 }
